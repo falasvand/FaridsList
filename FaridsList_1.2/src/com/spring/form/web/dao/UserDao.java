@@ -43,5 +43,14 @@ public class UserDao {
 		crit.add(Restrictions.eq("username", username));
 		return (User) crit.uniqueResult();
 	}
-	
+
+	public void disableUser(String username) {
+		User user = session().get(User.class, username);
+		user.setEnabled(false);
+	}
+
+	public void enableuser(String username) {
+		User user = session().get(User.class, username);
+		user.setEnabled(true);
+	}
 }

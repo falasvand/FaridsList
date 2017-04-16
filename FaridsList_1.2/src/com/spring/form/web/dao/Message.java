@@ -11,7 +11,7 @@ import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 
-@Entity
+@Entity(name="message")
 @Table(name="messages")
 public class Message implements Serializable{
 

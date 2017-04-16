@@ -43,4 +43,12 @@ public class UserService {
 	public List<Message> getMessages(String username) {
 		return mdao.getMessages(username);
 	}
+
+	public void disableUser(String username) {
+		udao.disableUser(username);
+	}
+
+	public void enableUser(String username) {
+		udao.enableuser(username);
+	}
 }

@@ -16,6 +16,9 @@
 
 	<security:http use-expressions="true">
 		<security:intercept-url pattern="/admin" access="hasRole('ROLE_ADMIN')" />
+		<security:intercept-url pattern="/deleteuser" access="hasRole('ROLE_ADMIN')" />
+		<security:intercept-url pattern="/enableuser" access="hasRole('ROLE_ADMIN')" />
+		<security:intercept-url pattern="/disableuser" access="hasRole('ROLE_ADMIN')" />
 		<security:intercept-url pattern="/createcomment" access="isAuthenticated()" />
 		<security:intercept-url pattern="/docreate" access="isAuthenticated()" />
 		<security:intercept-url pattern="/commentcreated" access="isAuthenticated()" />
